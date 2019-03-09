@@ -1,0 +1,330 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: 微軟正黑體;
+    position: relative;
+    
+}
+body{
+    height: 2000px;
+}
+a{
+    text-decoration: none;
+    color: aliceblue;
+
+}
+
+ul{
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+}
+
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+.container{
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 30px;
+}
+
+.clear:after{
+    content: "";
+    display: block;
+    height: 0;
+    visibility: hidden;
+    clear: both;
+}
+.nav{
+    background-color: #3a3a3a;
+}
+.menu-toggle,.popup-menu-close{
+    display: none;
+}
+
+
+@media (max-width: 768px){
+    .menu{
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: none;
+        background-color: #3a3a3a;
+        float: left;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+    }
+    .menu-toggle{
+        top: 10px;
+        font-size: 30px;
+        float: right;
+        display: block;
+    }
+    
+    #popup-menu:target{
+        display: block;
+        opacity: 1;
+        visibility: visible;
+    }
+    .popup-menu-close{
+        top: 0px;
+        right: 60px;
+        font-size: 30px;
+        display: block;
+        position: absolute;
+    }
+    .nav .menu > ul > li{
+        float: none;
+        text-align: center;
+        padding: 30px 30px;
+        top: 50px;
+    }
+
+    
+}
+
+.logo{
+    background-image: url(logo.svg);
+    height: 50px;
+    background-repeat: no-repeat;
+    float: left;
+    height: 60px;
+    width: 60px; 
+}
+
+
+
+.menu{
+    padding: 20px 10px;
+    float: right;
+}
+
+.menu > ul > li {
+    float: left;
+    padding: 0px 10px;
+}
+
+.menu > ul > li > a{
+    padding: 10px 10px;
+}
+.menu > ul > li > a:after{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 0;
+    background-color: #ff5e41;
+    left: 50%;
+    bottom: 0px;
+    transform: translateX(-50%); 
+    transition: all 0.5s;
+}
+
+.menu > ul > li:hover > a:after{
+    width: 100%;
+}
+
+.pic-wall .pic_item .img{
+    min-height:95vh;
+    background-size: cover;
+    background-position: center;
+}
+
+/* owl carousel */
+
+@media (max-width: 768px){
+    .owl-theme .owl-nav .owl-prev,.owl-theme .owl-nav .owl-next{
+        display: none;
+    }
+    .owl-theme .owl-dots .owl-dot{
+    height: 12px;
+	width: 12px;
+	border-radius: 50%;
+	display: inline-block;
+	vertical-align: top;
+	margin: 0 4px;
+    background-color: #fff;
+    opacity: 0.5;
+}
+
+    .owl-theme .owl-dots .owl-dot.active{
+    opacity: 1;
+    }
+
+}
+
+.owl-theme .owl-dots .owl-dot{
+    display: none;
+}
+.owl-theme .owl-nav .owl-prev,.owl-theme .owl-nav .owl-next{
+    position: absolute;
+    top: -47.5vh;
+    transform: translateY(-50%);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.5);
+    opacity: 0.5;
+    transition: all 0.3s;
+}
+.owl-theme .owl-nav .owl-prev:hover,.owl-theme .owl-nav .owl-next:hover{
+    opacity: 1;
+}
+.owl-theme .owl-nav .owl-prev{
+    left: 24px;
+    background-image: url(images/slider-arrows.png);
+    background-size: cover;
+    background-position: right;
+
+}
+.owl-theme .owl-nav .owl-next{
+    right: 24px;
+    background-image: url(images/slider-arrows.png);
+    background-size: cover;
+    background-position: left;
+
+
+}
+.owl-theme .owl-dots{
+    text-align: center;
+    bottom: 24px;
+    position: relative;
+}
+
+/* $section */
+@media (max-width:768px){
+
+}
+
+.section{
+    text-align: center;
+    padding: 150px 0px;
+    background-color: #f5f5f5;
+}
+
+.section  .icon{
+    font-size: 90px;
+    color: gray;
+    padding-bottom: 40px;
+    padding-top: 20px;
+    transition: all 0.3s;
+}
+.section  .icon:hover{
+    color: #ff5e41;
+    
+}
+
+
+
+.text{
+    font-size: 35px;
+    padding-bottom: 20px;
+}
+.section2{
+    position: relative;
+    padding: 0px 0px;
+}
+.section2 .text{
+    text-align: center;
+    padding: 20px;
+    padding-top: 80px;
+    background-color: #f5f5f5;
+    font-size: 30px;
+}
+.section2 .row .col-md-6{
+    padding: 150px;
+    position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.section2 .row .col-md-6:hover::before{
+    filter :brightness(0.5);
+    background-size: 120% auto;
+    color: #fff;
+    
+}
+.section2 .row .col-md-6::before{
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: center;
+    transition-duration: 0.5s;
+    background-repeat: no-repeat;
+}
+
+.pic01::before{
+    background-image: url(https://cdn.pixabay.com/photo/2019/02/26/05/44/fireworks-4021214_960_720.jpg);
+    block-size: cover;
+    background-size: 100% auto;
+}
+.pic02::before{
+    background-image: url(https://cdn.pixabay.com/photo/2016/03/21/10/44/desert-1270345_960_720.jpg);
+    block-size: cover;
+    background-size: 100% auto;
+      
+}
+.pic03::before{
+    background-image: url(https://images.pexels.com/photos/360912/pexels-photo-360912.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
+    block-size: cover;
+    background-size: 100% auto;
+}
+.pic04::before{
+    background-image: url(https://cdn.pixabay.com/photo/2019/03/04/11/24/dunes-4033821_960_720.jpg);
+    block-size: cover;
+    background-size: 100% auto;
+}
+.section2 .row .col-md-6 > a {
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
+}
+.section2 .row .col-md-6 > a > h2{
+    color: #f5f5f5;
+    display: inline-block;
+    
+    /* position: absolute; */
+}
+.section3{
+    padding: 50px;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+.section3 > h3 .text{
+    padding: 0px, 50px;
+}
+
+
+/* $footer */
+.footer{
+    background-color: #3a3a3a;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+}
+.footer-icon{
+    color: #3a3a3a;
+    font-size: 20px;
+    letter-spacing: 3px;
+    padding-bottom: 20px;   
+}
+.footer-icon::after{
+    content: "02-6666666";
+    padding-left: 10px;
+}
+
